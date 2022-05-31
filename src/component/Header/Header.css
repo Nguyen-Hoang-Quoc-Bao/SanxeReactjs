@@ -1,0 +1,205 @@
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+.Homepage{
+    width: 100%;
+    height: 100%;
+}
+.header{
+    display: block;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0 3px 12px 0 rgb(0 0 0 / 25%);
+    opacity: 0.9;
+    z-index: 999;
+}
+.header-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: gainsboro;
+}
+.header-top img{
+    width: 200px;
+    height: 100px;
+}
+.header-top-logo{
+    position: relative;
+}
+.header-top-logo img {
+    position: fixed;
+    top: 0;
+    left: 20px;
+    border-radius: 10px;
+}
+.header-top--ul{
+    display: flex;
+    margin: 0;
+}
+.header-top--ul li{
+    padding-right: 20px;
+    list-style-type: none;
+}
+.header-top--ul li a{
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-size: 12px;
+    transition: all ease 0.5s; 
+    line-height: 30px;     
+}
+.header-top--ul li:hover{
+    opacity: 0.6;
+}
+.header-bot > ul{
+    display: flex;
+    justify-content: end;
+    background-color: black;
+    margin: 0;
+}
+.header-bot > ul > li{
+    padding: 10px;
+    text-transform: uppercase;
+    position: relative;
+}
+.header-bot > ul > li:hover{
+    background-color: rgb(120, 116, 116);
+}
+.header-bot ul a{
+    text-decoration: none;
+    font-weight: 700;
+    color: white;
+}
+.header-bot-level-2{
+    top: 100%;
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    left: 0;
+    display: none;
+    padding: 0;
+}
+.header-bot-level-2 > li{
+    color: #ccc;
+    padding: 10px 0;
+    margin: 0;
+    transition: all ease .3s;
+    padding-left: 10px;
+}
+.level-1:hover .header-bot-level-2 {
+    display: block;
+}
+.header-bot-level-2 > li:hover{
+    background-color: rgb(146, 142, 142)
+}
+.slider img{
+    width: 100%;
+}
+.product{
+    height: 200px;
+}
+
+/*signup*/
+.formsignup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 99999;
+    display: block;
+}
+.container-signup{
+    position: fixed;
+    max-width: 850px;
+    width: 30%;
+    background: #fff;
+    padding: 40px 40px;
+    box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
+    perspective: 2700px;
+    animation: loginShow 0.5s ease;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 39%;
+}
+.container-signup i{
+position: absolute;
+top: 0;
+right: 0;
+z-index: 999;
+size: 35px;
+font-weight: bold;
+background-color: red;
+color: white;
+padding: 10px;
+}
+.container-signup i:hover{
+opacity: 0.5;
+cursor: pointer;
+}
+.container-signup i .ti-close{
+height: 28px;
+width: 30px;
+}
+.container-signup i .login--close{
+height: 20px;
+}
+.form-content .form-sign-up{
+    display: flex;
+    flex-direction: column;
+}
+.form-sign-up h1{
+    position: relative;
+    font-size: 24px;
+    font-weight: 500;
+    color: black;
+}
+.form-sign-up a{
+    text-decoration: none;
+}
+.form-sign-up input{
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid;
+    margin-bottom: 10px;
+    outline: none;
+}
+.form-sign-up a{
+    font-size: 14px;
+    margin-top: 5px;
+
+}
+.form-sign-up button{
+    font-size: 20px;
+    padding: 12px;
+    background-color: plum;
+    cursor: pointer;
+    margin-top: 30px;
+    border: none;
+    margin-bottom: 30px;
+    border-radius: 6px;
+}
+.form-sign-up p{
+    margin-top: 30px;
+    text-align: center;
+}
+.container-signup i .login-close{
+    height: 20px;
+}
+.js-signup{
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+.opensignup{
+    display: block ;
+}
