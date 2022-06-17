@@ -1,26 +1,27 @@
 import React from 'react';
-import Header from '../Header';
+import PropTypes from 'prop-types'
 import NewProduct from '../New-product';
-import Hot_product from '../Hot-product';
-import Slider from '../Slider';
 import ListService from '../Service';
 import Map from '../Map';
 import Footer from '../Footer';
 import './home.css'
-function Home () {
+import HotProduct from '../HotProduct';
+function Home (props) {
+    const {arrProduct} = props;
+
     return(
     <div className="home">
-        <Header />
          <div className="container">
-        <Slider />
-        <NewProduct />
+        <NewProduct  arrProduct={arrProduct}/>
         <h2>Hot Product</h2>
-        <Hot_product />
+        <HotProduct  arrProduct={arrProduct}/>
         <ListService />
         <Map />
-        <Footer/>
         </div>
     </div>
     )
+}
+Home.propTypes = {
+    arrProduct: PropTypes.array
 }
 export default Home;

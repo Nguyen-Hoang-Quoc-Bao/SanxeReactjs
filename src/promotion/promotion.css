@@ -1,0 +1,19 @@
+.promotionChild img {
+    width: 100%;
+    height: 95vh;
+}
+.promotionChild h2{
+    font-size: 20px;
+    padding: 16px 0;
+    margin: 0;
+}
+.P-CSS{
+    padding: 15px 0;
+}
+.promotion{
+    margin: 0 80px;
+    background-color: white;
+}
+.promotionChild{
+    margin: 0 50px;
+}

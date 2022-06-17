@@ -1,28 +1,26 @@
 import React from 'react'
-import img2 from '../../img/r15-chinh.jpg'
-import img from '../../img/winnerxx.jpg'
-import img1 from '../../img/sirius2.jpg'
+import { useNavigate } from "react-router-dom";
+import PropTypes from 'prop-types'
 import './New-product.css'
-const NewProduct = () => {
-    const arrimg = [
-        {
-            img: img2,
-        },
-        {
-            img: img,
-        },
-        { img: img1, }
-    ]
+const NewProduct = (props) => {
+    const {arrProduct} = props
+    const arrimg = [...arrProduct]
+    console.log(arrimg)
+    let navigate = useNavigate();
+    const HandleClick = (id) => {
+        navigate(`/detail/${id}`)
+    }
     return (
-        <div className="container_img">
-            {arrimg.map((item, index) => (
-                <a key={index} href="#/">
+        <div className="container_img" >
+            {arrimg.slice(5,8).map((item, index) => (
+                <a key={index} onClick={ () => HandleClick(item.id)} className='background-a'>
                     <img src={item.img} alt="" /></a>
             ))}
-
-
         </div>
     )
+}
+NewProduct.propTypes={
+    arrProduct: PropTypes.array
 }
 
 export default NewProduct

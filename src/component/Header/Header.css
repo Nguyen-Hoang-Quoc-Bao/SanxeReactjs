@@ -68,10 +68,20 @@ a{
 .header-bot > ul > li:hover{
     background-color: rgb(120, 116, 116);
 }
-.header-bot ul a{
+.header-bot ul a {
     text-decoration: none;
     font-weight: 700;
     color: white;
+}
+.header-bot-KM{
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+}
+
+.header-bot-KM:hover{
+    background-color: rgb(120, 116, 116);
 }
 .header-bot-level-2{
     top: 100%;
@@ -98,108 +108,8 @@ a{
 .slider img{
     width: 100%;
 }
-.product{
-    height: 200px;
-}
-
-/*signup*/
-.formsignup{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 99999;
-    display: block;
-}
-.container-signup{
-    position: fixed;
-    max-width: 850px;
-    width: 30%;
-    background: #fff;
-    padding: 40px 40px;
-    box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
-    perspective: 2700px;
-    animation: loginShow 0.5s ease;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    height: 39%;
-}
-.container-signup i{
-position: absolute;
-top: 0;
-right: 0;
-z-index: 999;
-size: 35px;
-font-weight: bold;
-background-color: red;
-color: white;
-padding: 10px;
-}
-.container-signup i:hover{
-opacity: 0.5;
+.login{
+font-size: 12px;
+margin-top: 6px;
 cursor: pointer;
-}
-.container-signup i .ti-close{
-height: 28px;
-width: 30px;
-}
-.container-signup i .login--close{
-height: 20px;
-}
-.form-content .form-sign-up{
-    display: flex;
-    flex-direction: column;
-}
-.form-sign-up h1{
-    position: relative;
-    font-size: 24px;
-    font-weight: 500;
-    color: black;
-}
-.form-sign-up a{
-    text-decoration: none;
-}
-.form-sign-up input{
-    padding: 10px;
-    border: none;
-    border-bottom: 1px solid;
-    margin-bottom: 10px;
-    outline: none;
-}
-.form-sign-up a{
-    font-size: 14px;
-    margin-top: 5px;
-
-}
-.form-sign-up button{
-    font-size: 20px;
-    padding: 12px;
-    background-color: plum;
-    cursor: pointer;
-    margin-top: 30px;
-    border: none;
-    margin-bottom: 30px;
-    border-radius: 6px;
-}
-.form-sign-up p{
-    margin-top: 30px;
-    text-align: center;
-}
-.container-signup i .login-close{
-    height: 20px;
-}
-.js-signup{
-    cursor: pointer;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: baseline;
-}
-.opensignup{
-    display: block ;
 }

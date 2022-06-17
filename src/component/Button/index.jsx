@@ -5,7 +5,7 @@ import './Button.css'
 
 const Button = (props) => {
     return (
-        <button className={`btn ${props.className}`} onClick={props.onClick ? () => props.onClick() : null}>{props.children}</button>
+        <button  className={`btn ${props.className}`}  onClick={props.onClick ? () => props.onClick() : null} >{props.children}</button>
     )
 }
 
@@ -18,7 +18,8 @@ export const OutlineButton = props => {
 Button.propTypes = {
     onClick: PropTypes.func,
     type: PropTypes.string,
-    className:PropTypes.string
+    className: PropTypes.string,
+    backgroundColor: PropTypes.string.isRequired
 }
 
 export default Button
