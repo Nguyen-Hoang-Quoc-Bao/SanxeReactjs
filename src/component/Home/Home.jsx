@@ -3,11 +3,12 @@ import PropTypes from 'prop-types'
 import NewProduct from '../New-product';
 import ListService from '../Service';
 import Map from '../Map';
-import Footer from '../Footer';
 import './home.css'
 import HotProduct from '../HotProduct';
+import { useSelector } from 'react-redux';
 function Home (props) {
     const {arrProduct} = props;
+    const cart = useSelector(state => state.cart.list)
 
     return(
     <div className="home">
@@ -21,6 +22,7 @@ function Home (props) {
     </div>
     )
 }
+
 Home.propTypes = {
     arrProduct: PropTypes.array
 }

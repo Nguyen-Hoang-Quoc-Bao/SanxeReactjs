@@ -17,3 +17,19 @@
 .promotionChild{
     margin: 0 50px;
 }
+@media (min-width: 750px) and (max-width: 1190px){
+    .promotionChild img{
+        height: 55vh;
+    }
+}
+@media only screen and (max-width: 790px){
+    .promotion{
+        margin: 0;
+    }
+    .promotionChild {
+        margin: 0 10px;
+    }
+    .promotionChild img{
+        height: 60vh
+    }
+}

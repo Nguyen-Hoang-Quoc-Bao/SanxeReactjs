@@ -5,7 +5,7 @@
 }
 .link{
     width: 80%;
-    margin: 10px 148px;
+    margin: 0px 148px;
     padding: 10px 0;
     border-bottom: 1px solid black;
     display: flex;
@@ -27,7 +27,7 @@
     margin-left: 35px;
 }
 .detail-right h1, .detail-h2{
-    margin: 10px;
+    margin: 10px 0;
     color: #c00;
 }
 .detail-right-top{
@@ -45,9 +45,32 @@
 .detail-right img {
     width: 29%;
     height: 203px;
-    margin: 10px 10px;
+    margin: 10px;
 }
-
+.btn-flex{
+    display: flex;
+    justify-content: flex-start;
+    width:100%;
+}
+.btn-cart{
+    background-color: #ee4d2d;
+    width: 30%;
+    height: 55px;
+    margin-top: 10px;
+    border: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+.btn-cart:hover{
+    cursor: pointer;
+    opacity: 0.8;
+    color: #ee4d2d;
+    background-color: white;
+    border: 1px solid #ee4d2d;
+}
 .table-container{
     display: flex;
     width: 100%;
@@ -90,7 +113,90 @@
 }
 .libary img{
     width: 50%;
+    height: 300px;
 }
 .libary-child{
     margin: 20px 0;
+}
+@media (min-width: 750px) and (max-width: 1080px){
+    .Detail{
+        flex-direction: column;
+        margin: 0px !important;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+    .link{
+        width: 69%;
+    }
+    .libary img{
+        height: 180px;
+    }
+    .detail-left{
+        width: 96% !important;
+        margin: 10px 0;
+    }
+    .detail-right{
+        margin-left: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+}
+@media only screen and (max-width: 880px){
+    .Detail{
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        margin: 0;
+        align-items: center;
+    }
+    .detail-left{
+        width: 82%;
+        margin: 10px 0;
+    }
+    .link{
+        margin: 0 52px;
+    }
+    .detail-right{
+        margin-bottom: 10px;
+        margin-left: 20px;
+    }
+    .detail-right-img{
+        width: 94%;
+    }
+    .detail-right-img img{
+        width: 44%;
+    }
+    .detail-right h1, .detail-h2{
+        margin: 0;
+    }
+    .table-item{
+        flex-direction: column;
+    }
+    .table-container{
+        justify-content: start;
+    }
+    .table-child-container{
+        width: 100%;
+        margin: 0;
+    }
+    .table-item{
+        width: 97%;
+        align-items: center;
+    }
+    .btn-flex{
+        width: 95%;
+    }
+    .btn-cart{
+        width: 99%;
+    }
+    .Detail-container h1{
+        display: flex;
+    justify-content: center;
+    }
+    .libary img{
+        height: 100px;
+    }
 }

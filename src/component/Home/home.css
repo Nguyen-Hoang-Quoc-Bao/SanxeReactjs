@@ -7,3 +7,19 @@
   margin: 0 60px;
     background-color: white;
 }
+@media (min-width: 750px) and (max-width: 1080px){
+  .cart{
+    font-size: 20px;
+  }
+  .App{
+    width: 100%;
+  }
+  .formcart{
+    width: 72% !important;
+  }  
+}
+@media only screen and (max-width: 790px){
+  .home{
+    margin: 0 24px;
+  }
+}

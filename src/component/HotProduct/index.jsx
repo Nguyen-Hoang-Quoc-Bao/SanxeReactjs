@@ -10,7 +10,12 @@ const HotProduct = (props) => {
     const handleClick = (id) => {
         navigate(`/detail/${id}`) 
     }
-    
+    const convertPrice = (value) => {
+        const valueFormat = new Intl.NumberFormat('it-IT', { style: 'currency', currency: 'VND' }).format(value);
+        return(
+            <div className="currency">Giá bán lẻ: {valueFormat}</div>
+        )
+    }
 
     return (
         <div className="hot-product">
@@ -19,7 +24,7 @@ const HotProduct = (props) => {
                     <div className="hot-product-item" onClick={ () => handleClick(item.id)}>
                         <div className="hot-product-des" >
                             <h1>{item.name}</h1>
-                            <h2>{item.price}</h2>
+                            <h2> {convertPrice(item.price)}</h2>
                             <p>{item.des}</p>
                         </div>
                         <img src={item.img} alt='' />

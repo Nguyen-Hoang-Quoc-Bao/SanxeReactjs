@@ -1,0 +1,74 @@
+.formcart{
+    background-color: white; 
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 90vh;
+    display: none;
+    z-index: 9999;
+    overflow-y: scroll;
+    border: 1px solid black;
+}
+
+.active{
+    display: block;
+}
+
+.container-cart{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+}
+.form-cart .btn-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: lightsalmon;
+    padding: 5px 10px;
+}
+.form-cart .btn-close:hover{
+    cursor: pointer;
+}
+.container-cart .form-content{
+    width: 90%;
+    margin-top: 15px;
+}
+.form-products{
+    display: flex;
+    width: 100%;
+    height: 200px;
+    border: 1px solid gray;
+    justify-content: space-between;
+    align-items: center;
+    margin: 14px 0;
+}
+.form-products img{
+    height: 100%;
+    width: 30%;
+    border: 1px solid black;
+}
+.form-products .btn-outline{
+    padding: 10px 15px;
+    border-radius: 999px;
+    border: none;
+    background-color: cadetblue;
+}
+.form-products h2{
+    font-size: 20px;
+    margin-right: 12px;
+    width: 15%;
+}
+.btn-delete{
+    background-color: lightblue !important;
+    border-radius: 10px;
+    border: none;
+}
+.total-money h3{
+    float: right;
+    display: flex;
+}
+

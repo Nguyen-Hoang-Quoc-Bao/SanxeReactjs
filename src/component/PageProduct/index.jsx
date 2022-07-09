@@ -20,13 +20,12 @@ const PageProduct = (props) => {
         const newArray = [...array, ...arrProduct]
         setArray(newArray)
     }
-
-    // useEffect(() => {
-    //         setInterval(() => {
-    //         const newArray = [...array, ...arrProduct]
-    //         setArray(newArray)
-    //     }, 3000);
-    //     }, [array])
+    const convertPrice = (value) => {
+        const valueFormat = new Intl.NumberFormat('it-IT', { style: 'currency', currency: 'VND' }).format(value);
+        return(
+            <div className="currency">{valueFormat}</div>
+        )
+    }
         
     
     return (
@@ -42,7 +41,7 @@ const PageProduct = (props) => {
                         </div>
                          {/* image-after */}
                         <h1>{item.name}</h1>
-                        <p>{item.price}</p>
+                        <p>{convertPrice(item.price)}</p>
                         <div className="button1">
                            <button type="submit" onClick={ () => handleClick(item.id)}>XEM CHI TIẾT</button>
                         </div>

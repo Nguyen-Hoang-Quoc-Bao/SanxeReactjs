@@ -39,6 +39,7 @@
 }
 .btn-slider:hover{
     opacity: 1;
+    cursor: pointer;
 }
 .radio-btn{
     display: flex;
@@ -55,6 +56,8 @@
     height: 20px;
     margin: 0 5px;
     z-index: 999999;
+    border: 1px solid black;
+    cursor: pointer;
 }
 .none{
     display: none;

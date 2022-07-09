@@ -1,0 +1,98 @@
+.formsignup{
+    display: none;
+    background-color: white; 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    z-index: 999;
+}
+.active{
+    display: block;
+}
+.container-signup{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 70vh;
+    align-items: center;
+    background-color: #537b35;
+}
+.container-signup .form-content {
+    width: 50%;
+    height: 66vh;
+}
+.form-content .form-sign-up{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form-sign-up .btn-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: lightsalmon;
+    padding: 5px 10px;
+}
+.form-sign-up h2{
+    font-size: 35px;
+    font-weight: 200;
+    color: #fff;
+    text-transform: uppercase;
+}
+.form-sign-up input{
+    padding: 12px 10px ;
+    font-size: 14px;
+    border: 2px solid #fff;
+    outline: none;
+    font-family: 'Quicksand', sans-serif;
+    width: 100%;
+}
+.form-sign-up p {
+    margin: 5px 0;
+}
+.icon{
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 22px;
+    margin: 10px;
+}
+.form-sign-up button{
+    font-size: 16px;
+    padding: 10px 65px;
+    border: none;
+    border-radius: 0px;
+    outline: none;
+    float: none;
+    cursor: pointer;
+    background: #fff;
+    color: #537b35;
+    margin-top: 30px;
+}
+.form-sign-up button:hover{
+    opacity: 0.7;
+}
+.form-sign-up .css-icon{
+    display: flex;
+    width: 140%;
+    margin: 10px 0;
+}
+
+@media only screen and (max-width: 780px){
+.formsignup{
+    width: 96%;
+}
+.container-signup{
+    height: 74vh;
+}
+.container-signup .form-content{
+    width: 80%;
+    height: 65vh;
+}
+.form-sign-up h2{
+    font-size: 28px;
+}
+
+}

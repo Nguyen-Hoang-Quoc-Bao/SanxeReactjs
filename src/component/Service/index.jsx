@@ -14,17 +14,20 @@ const ListService = () => {
     return (
         <div className="list-service">
             {arrService.map((item, index) => (
-                <div key={index} className="services">
-                    <img src={item.img1} alt="" />
-                    <div className="top-bot"><div className="service-top">
-                        <img src={item.img2} alt="" />
-                        <img src={item.img3} alt="" />
-                    </div>
-                        <div className="service-bot">
-                            <img src={item.img4} alt="" />
-                        </div>
-                    </div>
+                <div className="service-img">
+                <div className="service__layout-item reveal-item img-1"> 
+                <img src={Img1} alt="" />
                 </div>
+                <div className="service__layout-item reveal-item img-2">
+                <img src={Img2} alt="" />
+                </div>
+                <div className="service__layout-item reveal-item img-3">
+                <img src={Img3} alt="" />
+                </div>
+                <div className="service__layout-item reveal-item img-4">
+                <img src={Img4} alt="" />
+                </div>
+            </div>
             ))}
 
         </div>

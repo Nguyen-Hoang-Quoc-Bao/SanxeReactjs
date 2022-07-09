@@ -1,6 +1,5 @@
 .formlogin{
     background-color: white; 
-    display: block;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -8,6 +7,7 @@
     width: 60%;
     display: none;
     z-index: 999;
+    background: rgba(0, 0, 0, 0.75);
 }
 .container-login{
     display: flex;
@@ -22,58 +22,112 @@
 .form-content .form-login{
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 .form-login h1{
     position: relative;
-    font-size: 24px;
-    font-weight: 700;
-    color: black;
+    font-size: 35px;
+    font-weight: 300;
+    color: #fff;
     display: flex;
     JUSTIFY-CONTENT: CENTER;
     text-transform: uppercase;
 }
 .form-login input{
     padding: 10px;
-    border: none;
-    border-bottom: 1px solid;
-    margin-bottom: 5px;
+    font-size: 14px;
+    background: transparent;
+    border: 2px solid lightgrey;
     outline: none;
+    margin-bottom: 20px;
+    color: #fff;
+    font-family: 'Quicksand', sans-serif;
+    width: 100%;
 }
 .form-login a{
     font-size: 16px;
     margin-top: 9px;
     text-decoration: none;
-    color: mediumblue;
-    width: 33%;
+    color: white;
+    width: 100%;
 }
-.btn-close{
+.form-login .btn-close{
     position: absolute;
     top: 0;
     right: 0;
     background-color: lightsalmon;
     padding: 5px 10px;
 }
-.form-login button{
-    font-size: 20px;
-    padding: 12px;
-    background-color: lightpink;
+.form-login .btn-close:hover{
     cursor: pointer;
-    margin-top: 30px;
+}
+.form-login .login-btn{
+    font-size: 16px;
+    padding: 12px 0;
+    background-color: #537b35;
+    color: #FFF;
     border: none;
-    margin-bottom: 30px;
-    border-radius: 6px;
+    border-radius: 0px;
+    outline: none;
+    float: none;
+    cursor: pointer;
+    margin: 23px 0px;
+    width: 50%;
 }
 .form-login p{
     text-align: center;
-    color: mediumblue;
+    color: white;
+}
+.form-login p:hover{
+    cursor: pointer;
+    color: lightseagreen;
 }
 .jssignup{
     text-decoration: none;
     display: flex;
     justify-content: center;
-    align-items: baseline;
+    align-items: center;
+    width: 100%;
+    color: white;
 }
-
+.jssignup .btn-signup{
+    color: #fff;
+    font-weight: 600;
+    padding: 8px 20px;
+    border: 1px solid #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.jssignup .btn-signup:hover{
+    color: #537b35;
+    border: 1px solid #537b35;
+    cursor: pointer;
+}
+.jssignup .p-css{
+    margin: 0 5px;
+}
 .active{
     display: block;
+}
+@media (min-width: 760px) and (max-width: 1080px){
+    .active {
+        width: 85%;
+    }
+    .container-login .form-content {
+        width: 74%;
+        height: 37vh;
+    }
+    .jssignup{
+        font-size: 24px;
+    }
+    .jssignup .btn-signup{
+        padding: 12px 22px;
+    }
+}
+@media only screen and (max-width: 760px){
+    .active{
+        width: 100%;
+    }
+    .container-login .form-content{
+        width: 85%;
+    }
 }

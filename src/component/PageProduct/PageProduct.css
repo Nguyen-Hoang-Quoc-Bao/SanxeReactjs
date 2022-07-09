@@ -92,3 +92,13 @@
     color: white;
     border-radius: 10px;
 }
+@media (min-width: 750px) and (max-width: 1080px){
+    .childproduct{
+        width: 46%;
+    }
+}
+@media only screen and (max-width: 790px){
+    .childproduct{
+        width: 92%;
+    }
+}

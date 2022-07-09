@@ -1,0 +1,95 @@
+.idea-page{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 80%;
+    background-color: white;
+    margin-left: 118px;
+}
+.idea-page h1{
+    text-transform: uppercase;
+}
+.idea-page .btn-month{
+    width: 3%;
+}
+.idea-page .btn-year{
+    width: 6%;
+}
+.idea-page .idea-chose{
+    display: flex;
+    flex-direction: column;
+    text-align: initial;
+    margin: 0 40px;
+}
+.idea-chose .store-to-buy{
+    display: flex;
+    align-items: baseline;
+}
+.store-to-buy .name-store{
+    width: 50%;
+    height: 30px;
+}
+.store-to-buy .name-margin{
+    width: 36%;
+}
+.idea-chose .where-to-buy{
+    font-size: 20px;
+}
+.idea-chose .btn-color{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 10px 0 15px;
+}
+.btn-color .btn-color-row{
+    display: flex;
+    margin: 5px 0;
+}
+.btn-color-row .btn-row-1{
+    width: 40%;
+    font-size: 20px;
+}
+.where-to-buy .btn-where-buy{
+    display: flex;
+    align-items: center;
+}
+.idea-chose .btn-confirm{
+    display: flex;
+    justify-content: center;
+    margin: 22px 0  ;
+}
+.btn-confirm button{
+    padding: 10px 22px;
+    cursor: pointer;
+    background-color: lightseagreen;
+    border: none;
+}
+.btn-confirm button:hover{
+    background-color: lightgray;
+}
+@media only screen and (max-width: 760px){
+    h3, p{
+        font-size: 22px;
+        margin: 9px 0;
+    }
+    .where-to-buy input{
+        width: 20px;
+        height: 20px;
+    }
+    .idea-page .btn-month, .idea-page .btn-year{
+        width: 20%;
+        margin: 3px 0;
+    }
+    .idea-page{
+        width: 100%;
+        margin: 0;
+    }
+    .btn-color .btn-color-row{
+        margin: 0;
+        flex-direction: column;
+        font-size: 22px;
+    }
+    .btn-color-row .btn-row-1{
+        width: 100%;
+    }
+}

@@ -5,7 +5,7 @@ import './New-product.css'
 const NewProduct = (props) => {
     const {arrProduct} = props
     const arrimg = [...arrProduct]
-    console.log(arrimg)
+  
     let navigate = useNavigate();
     const HandleClick = (id) => {
         navigate(`/detail/${id}`)
