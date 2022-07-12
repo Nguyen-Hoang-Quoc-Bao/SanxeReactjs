@@ -64,6 +64,11 @@ a{
 }
 .showavatar {
     padding: 0 15px;
+    display: flex;
+    align-items: center;
+}
+.showavatar:hover{
+    cursor: pointer;
 }
 .exit{
     display: none;
@@ -78,7 +83,6 @@ a{
     display: block;
     z-index: 2 !important;
 }
-
 #show_menu{
     display: none;
 }

@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { type } from "@testing-library/user-event/dist/type";
 
 const initialState = {
   vehicleStore: [],
@@ -23,8 +22,6 @@ export const cartSlice = createSlice({
           ...newVehicleStore[isExist],
           count: newVehicleStore[isExist].count + 1,
         };
-
-        // console.log("newProduct", newProduct);
         state.vehicleStore.splice(isExist, 1, newProduct);
       } else {
         state.vehicleStore.push(product);

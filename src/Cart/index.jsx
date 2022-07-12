@@ -4,12 +4,12 @@ import { useDispatch, useSelector } from "react-redux";
 import PropTypes from "prop-types";
 import "./Cart.css";
 const Cart = (props) => {
-  const listCard = useSelector((state) => state.cart.vehicleStore);
   const { activeCart, onClickHideCart } = props;
+  const listCard = useSelector((state) => state.cart.vehicleStore);
+  const dispatch = useDispatch();
   const handleClose = () => {
     onClickHideCart(false);
   };
-  const dispatch = useDispatch();
   const handleAddToCart = (item) => {
     dispatch({
       type: "cart/addtocart",
@@ -28,7 +28,7 @@ const Cart = (props) => {
       payload: item,
     });
   };
-  //TOTAL
+  //TOTAL VND
   const total = listCard.reduce((preValue, curretValue) => {
     return preValue + curretValue.price * curretValue.count;
   }, 0);
@@ -38,6 +38,7 @@ const Cart = (props) => {
       style: "currency",
       currency: "VND",
     }).format(value);
+
     return <div className="currency">{valueFormat}</div>;
   };
 

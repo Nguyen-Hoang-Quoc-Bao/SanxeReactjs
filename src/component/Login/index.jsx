@@ -7,8 +7,12 @@ import SingUp from "../SignUp";
 
 const Login = (props) => {
   const { activeLogin, onClickHideLogin } = props;
+  const suCessSignUp = useSelector((state) => state.user.suCessSignUp);
+
   const handleClose = () => {
     onClickHideLogin(false);
+    setUsername("");
+    setPassword("");
   };
 
   const [username, setUsername] = useState("");
@@ -21,7 +25,6 @@ const Login = (props) => {
     const loginAccount = listUser.filter(
       (item) => item.username === username && item.password === password
     );
-    console.log("loginAccount", loginAccount[0]);
 
     if (loginAccount.length !== 0) {
       dispatch({
@@ -44,6 +47,14 @@ const Login = (props) => {
     setActiveSignup(value);
   };
 
+  useEffect(() => {
+    if (suCessSignUp) {
+      setActiveSignup(false);
+      dispatch({
+        type: "user/clearReducer",
+      });
+    }
+  }, [suCessSignUp]);
   return (
     <>
       <div className={`formlogin ${activeLogin ? "active" : null}`}>
@@ -57,7 +68,7 @@ const Login = (props) => {
               <h1>Đăng nhập</h1>
               <input
                 type="email"
-                placeholder="Email hoặc Tên đăng nhập"
+                placeholder="Nhập Tên đăng nhập"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
               />

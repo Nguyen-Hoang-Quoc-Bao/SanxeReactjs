@@ -11,6 +11,7 @@ import Login from "../Login";
 import { useDispatch, useSelector } from "react-redux";
 import Cart from "../../Cart";
 const Header = () => {
+  const [activeLogin, setActiveLogin] = useState(false);
   const topMenu = ["Câu hỏi thường gặp", "Góp ý"];
   // moblie-menu
   const showMenu = () => {
@@ -27,7 +28,7 @@ const Header = () => {
     };
   };
   //login
-  const [activeLogin, setActiveLogin] = useState(false);
+
   const handleOnClick = () => {
     setActiveLogin(true);
   };
@@ -35,9 +36,8 @@ const Header = () => {
   const onClickHideLogin = (value) => {
     setActiveLogin(value);
   };
-  const dispatch = useDispatch();
   const account = useSelector((state) => state.user.userActive);
-
+  const dispatch = useDispatch();
   const handleLogOut = () => {
     dispatch({
       type: "user/logout",
@@ -84,7 +84,11 @@ const Header = () => {
 
             {account ? (
               <div className="showavatar">
-                <img src={account.image} alt="" className="css-avatart"></img>
+                {account.image ? (
+                  <img src={account.image} alt="" className="css-avatart"></img>
+                ) : (
+                  <span className="username">{account.username}</span>
+                )}
                 <div className="exit" onClick={() => handleLogOut()}>
                   Đăng xuất
                 </div>
